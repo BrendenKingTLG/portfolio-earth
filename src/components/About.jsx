@@ -62,7 +62,7 @@ export default function About() {
             delay: 0,
             disableOnInteraction: false,
           }}
-          speed={5000}
+          speed={1000}
         >
           <SwiperSlide>
             <div className="flex flex-col justify-center items-center">
