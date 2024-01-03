@@ -249,7 +249,7 @@ function App() {
           cmd={updateSkills}
           body={
             <div>
-              <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-3 bg-white">
+              <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-3 bg-white text-black">
                 <h2 className=" text-4xl text-center">Skills</h2>
                 <h2 className="text-center pt-6 text-lg font-semibold leading-8 text-gray-900 border-0">
                   Full Stack Development
@@ -264,7 +264,7 @@ function App() {
                 </div>
               </div>
               <div className="mx-auto max-w-7xl px-6 lg:px-8 py-3 bg-white text-black">
-                <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+                <h2 className="text-center text-lg font-semibold leading-8">
                   Systems and Server Management/Architecture
                 </h2>
                 <div className="mx-auto my-5 grid grid-cols-3 items-center gap-8 justify-items-center">

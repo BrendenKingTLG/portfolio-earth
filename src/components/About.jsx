@@ -62,11 +62,13 @@ export default function About() {
         <Swiper
           slidesPerView={3}
           loop={true}
+          allowTouchMove={false}
           autoplay={{
-            delay: 0,
+            delay: 500,
+            pauseOnMouseEnter: true,
             disableOnInteraction: false,
           }}
-          speed={1000}
+          speed={2000}
         >
           <SwiperSlide>
             <div className="flex flex-col justify-center items-center">
