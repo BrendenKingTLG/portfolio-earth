@@ -362,7 +362,7 @@ export default function About() {
       </div>
       <div id="projects">
         <h2 className="text-2xl text-center py-5">Projects</h2>
-        <div className=" gap-10 flex flex-col">
+        <div className=" gap-10 flex flex-col lg:flex-row pb-10">
           <div className="card w-96  h-96 bg-base-100 shadow-xl image-full">
             <figure>
               <img
@@ -393,7 +393,7 @@ export default function About() {
                 className=""
               />
             </figure>
-            <div className="card-body flex justify-center flex-col items-center gap-10">
+            <div className="card-body flex justify-center flex-col items-center gap-10 pb-5">
               <h2 className="card-title text-4xl text-white">
                 Geo Company App
               </h2>
