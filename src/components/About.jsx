@@ -13,6 +13,10 @@ import {
   SiKubernetes,
   SiGitlab,
 } from "react-icons/si";
+import img from "../assets/java.png";
+import img1 from "../assets/company-app.png";
+import img2 from "../assets/python-app.png";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Autoplay } from "swiper/modules";
@@ -365,11 +369,7 @@ export default function About() {
         <div className=" gap-10 flex flex-col lg:flex-row pb-10">
           <div className="card w-96  h-96 bg-base-100 shadow-xl image-full">
             <figure>
-              <img
-                src="/python-app.png"
-                alt="img of Brenden King"
-                className=""
-              />
+              <img src={img2} alt="img of Brenden King" className="" />
             </figure>
             <div className="card-body flex justify-center flex-col items-center gap-10">
               <h2 className="card-title text-4xl text-white">Flask App</h2>
@@ -387,11 +387,7 @@ export default function About() {
           </div>
           <div className="card w-96  h-96 bg-base-100 shadow-xl image-full">
             <figure>
-              <img
-                src="/company-app.png"
-                alt="img of Brenden King"
-                className=""
-              />
+              <img src={img1} alt="img of Brenden King" className="" />
             </figure>
             <div className="card-body flex justify-center flex-col items-center gap-10 pb-5">
               <h2 className="card-title text-4xl text-white">
@@ -411,7 +407,7 @@ export default function About() {
           </div>
           <div className="card w-96 h-96 bg-base-100 shadow-xl image-full">
             <figure>
-              <img src="/java.png" alt="img of Brenden King" className="" />
+              <img src={img} alt="img of Brenden King" className="" />
             </figure>
             <div className="card-body flex justify-center flex-col items-center gap-10">
               <h2 className="card-title text-4xl text-white">
