@@ -8,6 +8,8 @@ import { Provider } from "react-redux";
 import Footer from "./components/Footer.jsx";
 import Nav from "./components/Nav.jsx";
 import About from "./components/About.jsx";
+import "swiper/css";
+import "swiper/css/autoplay";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,8 +17,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Nav />
       <Router>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<About />} />
+          <Route path="/globe" element={<App />} />
         </Routes>
       </Router>
       <Footer />

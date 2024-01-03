@@ -1,49 +1,45 @@
-import React from "react";
-import { useRef, useState } from "react";
-
 export default function Nav() {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
   return (
-    <nav className="flex items-center lg:justify-start justify-between flex-wrap bg-gray-300  p-6">
-      <div className="flex items-center flex-shrink-0 text-black mr-6">
-        <span className="font-semibold text-xl tracking-tight">
-          <a href="/portfolio-earth/">Brenden King</a>
-        </span>
-      </div>
-      <ul className="hidden text-black lg:flex gap-8 ">
-        <li>
-          <a href="/portfolio-earth/#/about">About</a>
-        </li>
-      </ul>
-      <div
-        className="block lg:hidden"
-        onClick={() => {
-          setMobileNavOpen(!mobileNavOpen);
-        }}
-      >
-        <button className="flex items-center px-3 py-2 border rounded text-black-200 border-teal-400 hover:text-black hover:border-white">
-          <svg
-            className="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      {mobileNavOpen && (
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div className="text-sm lg:flex-grow">
-            <a
-              href="/portfolio-earth/#/about"
-              className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4"
+    <div className="navbar bg-base-100">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              About
-            </a>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
           </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a
+                href="/portfolio-earth/#/globe"
+                className="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-black mr-4"
+              >
+                Globe
+              </a>
+            </li>
+          </ul>
         </div>
-      )}
-    </nav>
+      </div>
+      <div className="navbar-center">
+        <a className="btn btn-ghost text-xl" href="/portfolio-earth/#/">
+          Brenden King
+        </a>
+      </div>
+      <div className="navbar-end"></div>
+    </div>
   );
 }

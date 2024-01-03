@@ -5,8 +5,6 @@ import {
   BiLogoFlask,
   BiSolidData,
   BiLogoAws,
-  BiCaretDownCircle,
-  BiSolidCaretDownCircle,
 } from "react-icons/bi";
 import {
   SiGrafana,
@@ -15,293 +13,424 @@ import {
   SiKubernetes,
   SiGitlab,
 } from "react-icons/si";
-import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
+import { Autoplay } from "swiper/modules";
+SwiperCore.use([Autoplay]);
 
 export default function About() {
-  const [educationMenuOpen, setEducationMenuOpen] = useState(false);
-  const [experienceMenuOpen, setExperienceMenuOpen] = useState(false);
-  const [certMenuOpen, setCertMenuOpen] = useState(false);
+  // const [educationMenuOpen, setEducationMenuOpen] = useState(false);
+  // const [experienceMenuOpen, setExperienceMenuOpen] = useState(false);
+  // const [certMenuOpen, setCertMenuOpen] = useState(false);
 
   return (
-    <section className="" id="">
-      <div className="">
-        <div className=" bg-white flex justify-center">
-          <div className="w-full lg:w-5/6">
-            <div className=" bg-gray-900 flex justify-center items-center gap-5 py-10 ">
-              <div className="w-1/2 mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-                <div className=" text-3xl text-white font-bold tracking-tight sm:text-4xl ">
-                  <h2>
-                    Developer
-                    <br /> Architect <br />
-                    Maintainer
-                  </h2>
-                </div>
-              </div>
-              <div className="flex justify-center items-center">
-                <div className="flex justify-center align-center">
-                  <img
-                    src="/Brenden.jpeg"
-                    alt="img of Brenden King"
-                    width={200}
-                    height={150}
-                    className="rounded-full"
-                  />
-                </div>
-              </div>
+    <div className="lg:px-40">
+      <div className="hero min-h-fit">
+        <div className="hero-content flex-col w-max">
+          <div className="flex justify-center items-center flex-col gap-10">
+            <img
+              src="/Brenden.jpeg"
+              alt="img of Brenden King"
+              width={200}
+              height={150}
+              className="rounded-full"
+            />
+            <div className="flex gap-5">
+              <h2 className="text-xl font-bold">Developer</h2>
+              <h2 className="text-xl font-bold">Architect</h2>
+              <h2 className="text-xl font-bold">Maintainer</h2>
             </div>
-            <div
-              id="about"
-              className="flex justify-center shadow-xl px-5 py-5 bg-white text-lg text-black"
-            >
-              <p>
-                As a Mid-Level Software Developer at aqua IT, I work with a team
-                of talented engineers to design, develop, and deploy innovative
-                web applications for various clients and industries. I use my
-                skills in Java, Python, JavaScript, Angular, Mongoose, and AWS
-                to create user-friendly, secure, and scalable solutions that
-                meet the business and technical requirements.
-              </p>
+          </div>
+        </div>
+      </div>
+      <div id="about" className="flex justify-center px-8 py-3 text-lg">
+        <p>
+          As a Mid-Level Software Developer at aqua IT, I work with a team of
+          talented engineers to design, develop, and deploy innovative web
+          applications for various clients and industries. I use my skills in
+          Java, Python, JavaScript, Angular, Mongoose, and AWS to create
+          user-friendly, secure, and scalable solutions that meet the business
+          and technical requirements.
+        </p>
+      </div>
+      <div id="skills" className="">
+        <h2 className="text-2xl text-center py-5">Skills</h2>
+        <Swiper
+          slidesPerView={3}
+          loop={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          speed={5000}
+        >
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <IoLogoReact className="text-6xl" />
+              <p>React</p>
             </div>
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-3 bg-white">
-              <h2 className=" text-4xl text-center">Skills</h2>
-              <h2 className="text-center pt-6 text-lg font-semibold leading-8 text-gray-900 border-0">
-                Full Stack Development
-              </h2>
-              <div className="mx-auto my-5 grid grid-cols-3 items-center gap-8 justify-items-center">
-                <IoLogoReact size={50} />
-                <IoLogoNodejs size={50} />
-                <BiLogoFlask size={50} />
-                <BiLogoSpringBoot size={50} />
-                <BiLogoTailwindCss size={50} />
-                <BiSolidData size={50} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <IoLogoNodejs className="text-6xl" />
+              <p>Node.js</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <BiLogoTailwindCss className="text-6xl" />
+              <p>Tailwind CSS</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <BiLogoSpringBoot className="text-6xl" />
+              <p>Spring Boot</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <BiLogoFlask className="text-6xl" />
+              <p>Flask</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <BiSolidData className="text-6xl" />
+              <p>Data</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <BiLogoAws className="text-6xl" />
+              <p>AWS</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <SiGrafana className="text-6xl" />
+              <p>Grafana</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <SiKibana className="text-6xl" />
+              <p>Kibana</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <SiDocker className="text-6xl" />
+              <p>Docker</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col justify-center items-center">
+              <SiKubernetes className="text-6xl" />
+              <p>Kubernetes</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex-col flex justify-center items-center">
+              <SiGitlab className="text-6xl" />
+              <p>GitLab</p>
+            </div>{" "}
+          </SwiperSlide>
+        </Swiper>
+        <div id="certs">
+          <h2 className="text-center text-2xl py-5">Certs</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 px-8">
+            <div className="btn">
+              <div className="badge">Network+</div>
+            </div>
+            <div className="btn">
+              <div className="badge">Security+</div>
+            </div>
+            <div className="btn">
+              <div className="badge">CYSA+</div>
+            </div>
+            <div className="btn">
+              <div className="badge">Project+</div>
+            </div>
+            <div className="btn">
+              <div className="badge">ITIL v4 Foundations</div>
+            </div>
+            <div className="btn">
+              <div className="badge">LPI Linux Essentials</div>
+            </div>
+            <div className="btn">
+              <div className="badge">AWS Solutions Architect</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="education" className="px-3 pt-3">
+        <h2 className="text-center text-2xl py-5">Education</h2>
+        <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+          <li>
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-start md:text-end mb-10">
+              <time className="font-mono italic">2019</time>
+              <div className="text-lg font-black">
+                Associate of Space Operations
               </div>
+              Developed fundamentals for Orbital Mechanics, 3-D modeling, Heat
+              Transfer, and Sys Controls.
             </div>
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 py-3 bg-white text-black">
-              <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-                Systems and Server Management/Architecture
-              </h2>
-              <div className="mx-auto my-5 grid grid-cols-3 items-center gap-8 justify-items-center">
-                <SiDocker size={50} />
-                <SiGitlab size={50} />
-                <SiGrafana size={50} />
-                <SiKubernetes size={50} />
-                <SiKibana size={50} />
-                <BiLogoAws size={50} />
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-end mb-10">
+              <time className="font-mono italic">2022</time>
+              <div className="text-lg font-black">
+                Bachelor of Information Technology
               </div>
+              Cloud Computing, Database Management, and Network Analysis
             </div>
-            <div className="bg-white text-lg pt-6 text-black" id="resume">
-              <h2 className=" text-4xl text-center">Resume</h2>
-              <ul className="px-3 py-3">
-                <li
-                  onClick={() => setEducationMenuOpen(!educationMenuOpen)}
-                  className="flex items-center gap-2 text-2xl py-5"
-                >
-                  EDUCATION
-                  {educationMenuOpen ? (
-                    <BiSolidCaretDownCircle />
-                  ) : (
-                    <BiCaretDownCircle />
-                  )}
-                </li>
-                {educationMenuOpen && (
-                  <div>
-                    <p>Virginia Tech, 4.0 GPA, Est Grad May 2025</p>
-                    <p>
-                      Masters in computer science – Secure Software, Full-Stack
-                      Web Development, OOP/OOD
-                    </p>
-                    <p>Western Governors University, 3.89 GPA, July 2022</p>
-                    <p>
-                      Bachelor of Information Technology – Cloud Computing,
-                      Database Management, and Network Analysis
-                    </p>
-                    <p>Associate of Space Operations</p>
-                    <p>Community College of the Air Force, 4.0 GPA, May 2021</p>
-                    <p>
-                      Developed fundamentals for Orbital Mechanics, 3-D
-                      modeling, Heat Transfer, and Sys Controls.
-                    </p>
-                  </div>
-                )}
-                <li
-                  onClick={() => setExperienceMenuOpen(!experienceMenuOpen)}
-                  className="flex items-center gap-2 text-2xl py-5"
-                >
-                  EXPERIENCE{" "}
-                  {experienceMenuOpen ? (
-                    <BiSolidCaretDownCircle />
-                  ) : (
-                    <BiCaretDownCircle />
-                  )}
-                </li>
-                {experienceMenuOpen && (
-                  <div>
-                    <p>
-                      <strong>
-                        Amazon, AWS Software Development Engineer, July 2022 -
-                        Present
-                      </strong>
-                    </p>
-                    <ul>
-                      <li>
-                        Devised and executed an innovative solution to resolve a
-                        persistent job-sticking issue, resulting in annual
-                        savings of over $5400 and freeing up more than 20
-                        development hours per month
-                      </li>
-                      <li>
-                        Led CI/CD automation for three enterprise level
-                        services, reduced new domain build workload by 73%
-                        saving 60,000+ in yearly revenue.
-                      </li>
-                      <li>
-                        Increased software security by developing code test
-                        coverage to at least 90%
-                      </li>
-                      <li>
-                        Improved operational oversight by onboarding Grafana
-                        (data visualization tool) which led to increased
-                        insights and discovery of 10+ system anomalies.
-                      </li>
-                    </ul>
-                    <p>
-                      <strong>
-                        Apex Systems, AWS Solutions Architect Intern, January
-                        2022 – April 2022
-                      </strong>
-                    </p>
-                    <ul>
-                      <li>
-                        Developed a custom AWS Lambda function, automating a
-                        critical business process, resulting in increased
-                        efficiency and reduced manual effort.
-                      </li>
-                      <li>
-                        Constructed a user-friendly web application utilizing
-                        various AWS services, including EC2, S3, and RDS,
-                        delivering a seamless user experience
-                      </li>
-                      <li>
-                        Created a streamlined pipeline using CodePipeline and
-                        CodeBuild, enabling efficient code deployment and
-                        continuous integration, ultimately improving the
-                        development process.
-                      </li>
-                    </ul>
-                    <p>
-                      <strong>
-                        Space Force, Satellite System Operator, October 2018 –
-                        October 2022
-                      </strong>
-                    </p>
-                    <ul>
-                      <li>
-                        Managed the responsibility for all technical aspects of
-                        satellite equipment installation, operations,
-                        configuration, and alignment to keep lines of
-                        communication up and running.
-                      </li>
-                      <li>
-                        Improved efficiency by assisting as an operational
-                        instructor.
-                      </li>
-                      <li>
-                        Enhanced employee engagement by developing OJT training
-                        material and taught 30+ new operators.
-                      </li>
-                      <li>
-                        Increased operational tempo by 30% by overseeing and
-                        improving several checklists.
-                      </li>
-                      <li>
-                        Resolved multiple on-orbit anomalies as well as
-                        maintained kinetic operations and refugee evacuation
-                        efforts in the Middle East.
-                      </li>
-                    </ul>
-                  </div>
-                )}
-                <li
-                  onClick={() => setCertMenuOpen(!certMenuOpen)}
-                  className="flex items-center gap-2 text-2xl py-5"
-                >
-                  CERTIFICATIONS{" "}
-                  {certMenuOpen ? (
-                    <BiSolidCaretDownCircle />
-                  ) : (
-                    <BiCaretDownCircle />
-                  )}
-                </li>
-                {certMenuOpen && (
-                  <div>
-                    <ul>
-                      <li>CompTIA Network+</li>
-                      <li>CompTIA Security+</li>
-                      <li>CompTIA CYSA+</li>
-                      <li>CompTIA Project+</li>
-                      <li>ITIL v4 Foundations</li>
-                      <li>LPI Linux Essentials</li>
-                    </ul>
-                  </div>
-                )}
-              </ul>
-              <div className="flex items-center justify-center py-2 ">
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-start md:text-end mb-10">
+              <time className="font-mono italic">2024</time>
+              <div className="text-lg font-black">
+                Masters in Computer Science
+              </div>
+              Secure Software, Full-Stack Web Development, OOP/OOD
+            </div>
+            <hr />
+          </li>
+        </ul>
+      </div>
+      <div id="experience">
+        <h2 className="text-2xl text-center py-5">Experience</h2>
+        <div className="collapse collapse-plus bg-base-200">
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div className="collapse-title text-xl font-medium">
+            Aqua-IT Software Developer
+          </div>
+          <div className="collapse-content">
+            <ul>
+              <li>
+                Successfully migrated five key applications to OpenShift,
+                enhancing the scalability and reliability of services, which led
+                to a more agile and efficient project delivery process.
+              </li>
+              <li>
+                Leveraged OpenShift's containerization technology, improving
+                application performance and environment consistency, thus
+                providing a more robust and responsive customer support
+                experience.
+              </li>
+              <li>
+                Implemented automated deployment pipelines in OpenShift for all
+                five applications, significantly reducing deployment times and
+                manual errors, and enabling faster feature rollouts and updates
+                in response to customer feedback.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-base-200">
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-xl font-medium">
+            AWS Software Development Engineer
+          </div>
+          <div className="collapse-content">
+            <ul>
+              <li>
+                Devised and executed an innovative solution to resolve a
+                persistent job-sticking issue, resulting in annual savings of
+                over $5400 and freeing up more than 20 development hours per
+                month
+              </li>
+              <li>
+                Led CI/CD automation for three enterprise level services,
+                reduced new domain build workload by 73% saving 60,000+ in
+                yearly revenue.
+              </li>
+              <li>
+                Increased software security by developing code test coverage to
+                at least 90%
+              </li>
+              <li>
+                Improved operational oversight by onboarding Grafana (data
+                visualization tool) which led to increased insights and
+                discovery of 10+ system anomalies.
+              </li>
+            </ul>{" "}
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-base-200">
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-xl font-medium">
+            Cloud Engineer Intern
+          </div>
+          <div className="collapse-content">
+            <ul>
+              <li>
+                Developed a custom AWS Lambda function, automating a critical
+                business process, resulting in increased efficiency and reduced
+                manual effort.
+              </li>
+              <li>
+                Constructed a user-friendly web application utilizing various
+                AWS services, including EC2, S3, and RDS, delivering a seamless
+                user experience
+              </li>
+              <li>
+                Created a streamlined pipeline using CodePipeline and CodeBuild,
+                enabling efficient code deployment and continuous integration,
+                ultimately improving the development process.
+              </li>
+            </ul>{" "}
+          </div>
+        </div>
+        <div className="collapse collapse-plus bg-base-200">
+          <input type="radio" name="my-accordion-3" />
+          <div className="collapse-title text-xl font-medium">
+            USSF Satellite System Operator
+          </div>
+          <div className="collapse-content">
+            <ul>
+              <li>
+                Managed the responsibility for all technical aspects of
+                satellite equipment installation, operations, configuration, and
+                alignment to keep lines of communication up and running.
+              </li>
+              <li>
+                Improved efficiency by assisting as an operational instructor.
+              </li>
+              <li>
+                Enhanced employee engagement by developing OJT training material
+                and taught 30+ new operators.
+              </li>
+              <li>
+                Increased operational tempo by 30% by overseeing and improving
+                several checklists.
+              </li>
+              <li>
+                Resolved multiple on-orbit anomalies as well as maintained
+                kinetic operations and refugee evacuation efforts in the Middle
+                East.
+              </li>
+            </ul>{" "}
+          </div>
+        </div>
+      </div>
+      <div id="projects">
+        <h2 className="text-2xl text-center py-5">Projects</h2>
+        <div className=" gap-10 flex flex-col">
+          <div className="card w-96  h-96 bg-base-100 shadow-xl image-full">
+            <figure>
+              <img
+                src="/python-app.png"
+                alt="img of Brenden King"
+                className=""
+              />
+            </figure>
+            <div className="card-body flex justify-center flex-col items-center gap-10">
+              <h2 className="card-title text-4xl text-white">Flask App</h2>
+              <div className="card-actions justify-end">
                 <a
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  download="brenden_king_cv.pdf"
-                  href="/Resume-Brenden-King.pdf"
-                >
-                  Download CV
-                </a>
-              </div>
-            </div>
-            <div className="py-3 lg:mb-10 text-black" id="projects">
-              <h2 className=" text-4xl text-center py-3">Projects</h2>
-              <div className="flex justify-center align-center flex-col gap-10 items-center sm:flex-row">
-                <a
-                  className="border-2 border-stone-400 w-60 h-80 overflow-hidden flex justify-center items-center flex-col"
-                  href="https://brendenkingtlg.github.io/examplecompanyapp/"
-                >
-                  <img
-                    src="/company-app.png"
-                    alt="img of Brenden King"
-                    width={200}
-                    height={150}
-                    className=""
-                  />
-                  <p>Example Company App</p>
-                </a>
-                <a
-                  className="border-2 border-stone-400 w-60 h-80 overflow-hidden flex justify-center items-center flex-col"
+                  className="btn btn-primary text-white"
                   href="https://github.com/BrendenKingTLG/flask-api"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
-                    src="/python-app.png"
-                    alt="img of Brenden King"
-                    width={150}
-                    height={150}
-                    className=""
-                  />
-                  <p>Flask API with web view</p>
+                  Visit
                 </a>
+              </div>
+            </div>
+          </div>
+          <div className="card w-96  h-96 bg-base-100 shadow-xl image-full">
+            <figure>
+              <img
+                src="/company-app.png"
+                alt="img of Brenden King"
+                className=""
+              />
+            </figure>
+            <div className="card-body flex justify-center flex-col items-center gap-10">
+              <h2 className="card-title text-4xl text-white">
+                Geo Company App
+              </h2>
+              <div className="card-actions justify-end">
                 <a
-                  className="border-2 border-stone-400 w-60 h-80 overflow-hidden flex justify-center items-center flex-col"
-                  href="https://bookstore-fo9w.onrender.com/bookstore/"
+                  className="btn btn-primary text-white"
+                  href="https://brendenkingtlg.github.io/examplecompanyapp/"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <img
-                    src="/java.png"
-                    alt="img of Brenden King"
-                    width={350}
-                    height={150}
-                    className=""
-                  />
-                  <p>Java Servlet API</p>
+                  Visit
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="card w-96 h-96 bg-base-100 shadow-xl image-full">
+            <figure>
+              <img src="/java.png" alt="img of Brenden King" className="" />
+            </figure>
+            <div className="card-body flex justify-center flex-col items-center gap-10">
+              <h2 className="card-title text-4xl text-white">
+                Java Servlet API
+              </h2>
+              <div className="card-actions justify-end">
+                <a
+                  className="btn btn-primary text-white"
+                  href="https://bookstore-fo9w.onrender.com/bookstore/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

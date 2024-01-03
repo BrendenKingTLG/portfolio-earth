@@ -8,3 +8,23 @@ html {
   height: 100%;
   width: 100%;
 }
+
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 5px solid #2196f3;
+}
+ul li:last-child {
+  margin-bottom: 0;
+}
